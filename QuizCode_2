@@ -1,0 +1,11 @@
+fun main() {
+    println(calculateBMI(40.5,67.7))
+}
+
+fun calculateBMI(weightKG: Double, heightM: Double): Double{
+    if (weightKG < 0.0 || heightM <= 0.0){
+        throw IllegalArgumentExecution("Note: Weight and Height Must be Positive Values")
+    }
+    val bmi = weightKG / (heightM * heightM)
+    return bmi
+}
