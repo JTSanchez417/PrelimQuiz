@@ -1,0 +1,15 @@
+fun convertDollarToPeso(amountDollar: Double): Double {
+    if (amountDollar < 0) {
+        throw IllegalArgumentException("Note: Amount must be a positive value")
+    }
+    val exchangeRate = 56.69 // equivalent of 1 USD
+
+    return amountDollar * exchangeRate
+}
+
+
+fun main() {
+    val amountDollar = 1.0 // 100 US dollars
+    val equivalentAmountPeso = convertDollarToPeso(amountDollar)
+    println("$amountDollar USD is equal to $equivalentAmountPeso PHP")
+}
